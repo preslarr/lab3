@@ -88,10 +88,10 @@ public class Key {
 	
 	public int compareTo(Key in){
 		if (this.getCount() > in.getCount()){
-			return -1;
+			return 1;
 		} 
 		if (this.getCount() < in.getCount()){
-			return 1;
+			return -1;
 		}
 		for (int x = this.mykey.length()-1; x>=0;x-=1){
 			if (this.mykey.charAt(x) != '-'){
