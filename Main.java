@@ -3,6 +3,7 @@ package hangman;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Set;
 
 import hangman.IEvilHangmanGame.GuessAlreadyMadeException;
 
@@ -31,6 +32,7 @@ public class Main {
 		game.setGcount(numofguesses);
 		Scanner cin = new Scanner(System.in);
 		String input;
+		Set<String> tempset;
 
 		// begin play loop**************
 		while (game.gameRunning(game)) {
@@ -42,7 +44,8 @@ public class Main {
 			if (game.checkGuessValid(input)) {
 				char daletter = input.charAt(0);
 				try {
-					game.mypart.words = game.makeGuess(daletter);
+					
+					tempset = game.makeGuess(daletter);
 				} catch (GuessAlreadyMadeException e) {
 					// TODO Auto-generated catch block
 					System.out.println("You already guessed that\n");
