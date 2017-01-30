@@ -98,11 +98,11 @@ public class Key {
 				if (in.mykey.charAt(x) != '-'){
 					
 				} else {
-					return 1;
+					return -1;
 				}
 			} else {
 				if (in.mykey.charAt(x) != '-'){
-					return -1;
+					return 1;
 				}
 			}
 		}
