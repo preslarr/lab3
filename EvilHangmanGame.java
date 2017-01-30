@@ -51,6 +51,7 @@ public class EvilHangmanGame implements IEvilHangmanGame {
 		Set<String> output = new TreeSet<>();
 		output = kpp.getBestSet();
 		addGuessedLetter(guess);
+		//System.out.print(output);
 		return output;
 	}
 
