@@ -52,7 +52,7 @@ public class EvilHangmanGame implements IEvilHangmanGame {
 		output = kpp.getBestSet();
 		addGuessedLetter(guess);
 		mypart.words = output;
-		System.out.print(output);
+		//System.out.print(output);
 		return output;
 	}
 
